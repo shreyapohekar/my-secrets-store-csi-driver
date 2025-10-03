@@ -2,7 +2,7 @@
 
 [![e2e](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/actions/workflows/e2e.yml/badge.svg)](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/actions/workflows/e2e.yml)
 
-[Google Secret Manager](https://cloud.google.com/secret-manager/) provider for
+[Google Secret Manager](https://cloud.google.com/secret-manager/) provider fors
 the [Secret Store CSI
 Driver](https://github.com/kubernetes-sigs/secrets-store-csi-driver). Allows you
 to access secrets stored in Secret Manager as files mounted in Kubernetes pods.123
