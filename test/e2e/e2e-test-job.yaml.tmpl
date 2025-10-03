@@ -1,0 +1,45 @@
+# Copyright 2025 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: $JOB_NAME # This will be the unique job name like e2e-test-job-xxxx-sm
+  namespace: e2e-test
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      name: e2e-test
+    spec:
+      serviceAccountName: e2e-test-sa
+      restartPolicy: Never
+      containers:
+        - name: e2e-test
+          image: gcr.io/$PROJECT_ID/e2e-test:$GCP_PROVIDER_SHA
+          imagePullPolicy: Always
+          command: ["/bin/bash", "-c"]
+          args: ["./run_tests.sh"]
+          env:
+          - name: GCP_PROVIDER_SHA
+            value: "$GCP_PROVIDER_SHA"
+          - name: PROJECT_ID
+            value: "$PROJECT_ID"
+          - name: SECRET_STORE_VERSION
+            value: "$SECRET_STORE_VERSION"
+          - name: GKE_VERSION
+            value: "$GKE_VERSION"
+          - name: LOCATION_ID
+            value: "$LOCATION_ID"
+          - name: E2E_TEST_SUITE # To be used by the test runner in the container
+            value: $TEST_SUITE_NAME
