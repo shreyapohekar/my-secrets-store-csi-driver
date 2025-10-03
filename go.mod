@@ -19,7 +19,7 @@ go 1.24.0
 toolchain go1.24.2
 
 require (
-	cloud.google.com/go/compute/metadata v0.7.0
+	cloud.google.com/go/compute/metadata v0.9.0
 	cloud.google.com/go/iam v1.5.2
 	cloud.google.com/go/parametermanager v0.2.1
 	cloud.google.com/go/secretmanager v1.14.7
@@ -95,7 +95,7 @@ require (
 	golang.org/x/crypto v0.39.0 // indirect
 	golang.org/x/net v0.41.0 // indirect
 	golang.org/x/sync v0.15.0 // indirect
-	golang.org/x/sys v0.33.0 // indirect
+	golang.org/x/sys v0.35.0 // indirect
 	golang.org/x/term v0.32.0 // indirect
 	golang.org/x/text v0.26.0 // indirect
 	golang.org/x/time v0.12.0 // indirect
