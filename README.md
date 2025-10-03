@@ -7,7 +7,7 @@ the [Secret Store CSI
 Driver](https://github.com/kubernetes-sigs/secrets-store-csi-driver). Allows you
 to access secrets stored in Secret Manager as files mounted in Kubernetes pods.
 
-## Install
+## Installs
 
 * Create a new GKE cluster with Workload Identity or enable
   [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#enable_on_existing_cluster)
