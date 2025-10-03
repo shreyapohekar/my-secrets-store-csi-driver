@@ -1,4 +1,4 @@
-# Google Secret Manager Provider for Secret Store CSI Driver
+# Google Secret Manager Provider for Secret Store CSI Driveraa
 
 [![e2e](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/actions/workflows/e2e.yml/badge.svg)](https://github.com/GoogleCloudPlatform/secrets-store-csi-driver-provider-gcp/actions/workflows/e2e.yml)
 
